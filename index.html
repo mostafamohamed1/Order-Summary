@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --Pale-blue: hsl(225, 100%, 94%);
+        --Bright-blue: hsl(245, 75%, 52%);
+        --Very-pale-blue: hsl(225, 100%, 98%);
+        --Desaturated-blue: #7280a7;
+        --Dark-blue: hsl(223, 47%, 23%);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+
+        background: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-color: var(--Pale-blue);
+
+        position: relative;
+      }
+
+      .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 1.5rem;
+      }
+
+      main {
+        max-width: 350px;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .hero-img img {
+        display: inline-block;
+        max-width: 100%;
+      }
+
+      .hero-typo {
+        padding: 2rem 3rem;
+        text-align: center;
+      }
+
+      .hero-typo h1 {
+        font-size: 2.3rem;
+        font-weight: 900;
+        color: var(--Dark-blue);
+      }
+
+      .hero-typo p {
+        margin-top: 1rem;
+        color: var(--Desaturated-blue);
+        font-size: 1.4rem;
+      }
+
+      .hero-payment {
+        padding: 0 3rem 2rem;
+      }
+
+      .hero-payment .billing {
+        background-color: var(--Very-pale-blue);
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        border-radius: 1rem;
+      }
+
+      .hero-payment .billing img {
+        display: block;
+        margin-right: 1.5rem;
+      }
+
+      .hero-payment .billing a {
+        font-size: 1.5rem;
+        color: var(--Dark-blue);
+        transition: 0.5s ease;
+        margin-right: 1rem;
+      }
+
+      .hero-payment .billing a:hover {
+        text-decoration: none;
+        color: var(--Bright-blue);
+      }
+
+      .hero-payment .billing .plan {
+        margin-right: auto;
+      }
+
+      .hero-payment .billing .plan span {
+        display: block;
+        font-weight: 900;
+        font-size: 1.4rem;
+        color: var(--Dark-blue);
+      }
+
+      .hero-payment .billing .plan span:last-child {
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+
+      .hero-payment .btns {
+        margin-top: 2rem;
+      }
+
+      .hero-payment .btns button {
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+
+        cursor: pointer;
+      }
+      .hero-payment .btns button:first-child {
+        background-color: var(--Bright-blue);
+        box-shadow: 0 10px 10px rgb(114, 128, 167, 0.3);
+        transition: 0.3s ease;
+      }
+
+      .hero-payment .btns button:last-child {
+        color: var(--Dark-blue);
+        margin-bottom: 0;
+        background-color: transparent;
+      }
+
+      .hero-payment .btns button:focus {
+        outline: none;
+      }
+      .hero-payment .btns button:first-child:hover {
+        background-color: var(--Desaturated-blue);
+      }
+
+      .attribution {
+        align-self: flex-end;
+        padding: 2rem 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <div class="hero-img">
+          <img src="images/illustration-hero.svg" alt="Hero" />
+        </div>
+        <div class="hero-typo">
+          <h1>Order Summary</h1>
+          <p>
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+        </div>
+        <div class="hero-payment">
+          <div class="billing">
+            <img src="images/icon-music.svg" alt="music icon" />
+            <div class="plan">
+              <span>Annual Plan</span>
+              <span>$59.99/year</span>
+            </div>
+            <a href="#">Change</a>
+          </div>
+          <div class="btns">
+            <button>Proceed to Payment</button>
+            <button>Cancel Order</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Order Summary
+
+  You can now listen to millions of songs, audiobooks, and podcasts on any 
+  device anywhere you like!
+
+  Annual Plan
+  $59.99/year
+
+  Change
+
+  Proceed to Payment
+  Cancel Order
+   -->
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
